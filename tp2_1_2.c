@@ -10,8 +10,10 @@ int main() {
     double *punt;
     double vt[N];
     
-    for(punt = vt; punt<vt+N; punt++) {
+    for(punt=vt; punt<vt+N; punt++) {
         *punt=1+rand()%100;
         printf("%.2lf\n", *punt);
     }
+
+    return 0;
 }
