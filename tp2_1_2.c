@@ -12,6 +12,6 @@ int main() {
     
     for(punt = vt; punt<vt+N; punt++) {
         *punt=1+rand()%100;
-        printf("%f\n", *punt);
+        printf("%.2lf\n", *punt);
     }
 }
