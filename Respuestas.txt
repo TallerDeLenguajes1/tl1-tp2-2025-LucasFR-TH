@@ -1,0 +1,7 @@
+El archivo 'tp2_1_2.c' no podia verse ya que este se realizo en un branch disitnto al main y no guarda relacion con la conexion al repositorio.
+
+Este archivo se agrega en relacion al 'main' entonces se ven los cambios realizados.
+
+Luego de hacer el merge entre el prinicpal y la rama que habia creado puedo ver los archivos que fueron creados en la rama 'Opcion_2'.
+
+
