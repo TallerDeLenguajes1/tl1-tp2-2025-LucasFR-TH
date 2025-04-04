@@ -72,3 +72,19 @@ void mostrarMasVieja(Compu pcs[], int cantidad) {
     printf("Tipo de CPU: %d\n", pcs[masVieja].tipo_cpu);
 }
 
+void mostrarMasVeloz(Compu pcs[], int cantidad) {
+    int masVeloz = 0; // auxiliar para guardar la pc mas vieja
+    int velocidadref = 0; // velocidad de referencia para comparar
+    for (int i=0; i<cantidad; i++) {
+        if (pcs[i].velocidad > velocidadref) {
+            masVeloz = i;
+            velocidadref = pcs[i].velocidad; // actualizo la velocidad de referencia
+        }
+    }
+    printf("La PC mas veloz es la %d\n", masVeloz);
+    printf("Velocidad: %d\n", pcs[masVeloz].velocidad);
+    printf("Anio: %d\n", pcs[masVeloz].anio);
+    printf("Cantidad de nucleos: %d\n", pcs[masVeloz].cantidad_nucleos);
+    printf("Tipo de CPU: %d\n", pcs[masVeloz].tipo_cpu);
+}
+
