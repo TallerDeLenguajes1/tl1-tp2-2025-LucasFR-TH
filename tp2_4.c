@@ -31,21 +31,15 @@ int main() {
         pcs[i].cantidad_nucleos = (rand() % (8 - 1 + 1)) + 1;
 
         // le asigno un tipo de cpu
-
+        int aleatorio = rand() % 6;
+        pcs[i].tipo_cpu = tipos[aleatorio];
     }
 
+    listarPCs(pcs, cantidad);
+    printf("\n\n");
+    mostrarMasVieja(pcs, cantidad);
+    printf("\n\n");
+    mostrarMasVeloz(pcs, cantidad); 
+
+    return 0;
 }
-
-
-void listarPCs(Compu pcs[], int cantidad) {
-    printf("LISTADO DE PC'S \n");
-    for (int i=0; i<cantidad; i++) {
-        printf("PC's %d:\n", i);
-        printf("Velocidad: %d\n", pcs[i].velocidad);
-        printf("Anio: %d\n", pcs[i].anio);
-        printf("Cantidad de nucleos: %d\n", pcs[i].cantidad_nucleos);
-        printf("Tipo de CPU: %d\n", pcs[i].tipo_cpu);
-    }
-}
-
-void mostrarMasVieja(Compu pcs[], int cantidad);
