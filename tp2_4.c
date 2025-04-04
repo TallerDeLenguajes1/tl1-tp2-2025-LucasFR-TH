@@ -55,3 +55,20 @@ void listarPCs(Compu pcs[], int cantidad) {
         printf("Tipo de CPU: %d\n", pcs[i].tipo_cpu);
     }
 }
+
+void mostrarMasVieja(Compu pcs[], int cantidad) {
+    int masVieja = 0; // auxiliar para guardar la pc mas vieja
+    int anioref = 10; // año de referencia para comparar
+    for (int i=0; i<cantidad; i++) {
+        if (pcs[i].anio > anioref) {
+            masVieja = i;
+            anioref = pcs[i].anio; // actualizo el año de referencia
+        }
+    }
+    printf("La PC mas vieja es la %d\n", masVieja);
+    printf("Velocidad: %d\n", pcs[masVieja].velocidad);
+    printf("Anio: %d\n", pcs[masVieja].anio);
+    printf("Cantidad de nucleos: %d\n", pcs[masVieja].cantidad_nucleos);
+    printf("Tipo de CPU: %d\n", pcs[masVieja].tipo_cpu);
+}
+
