@@ -48,19 +48,19 @@ int main() {
 void listarPCs(Compu pcs[], int cantidad) {
     printf("LISTADO DE PC'S \n");
     for (int i=0; i<cantidad; i++) {
-        printf("PC's %d:\n", i);
+        printf("\nPC %d:\n", i);
         printf("Velocidad: %d\n", pcs[i].velocidad);
         printf("Anio: %d\n", pcs[i].anio);
         printf("Cantidad de nucleos: %d\n", pcs[i].cantidad_nucleos);
-        printf("Tipo de CPU: %d\n", pcs[i].tipo_cpu);
+        printf("Tipo de CPU: %s\n", pcs[i].tipo_cpu); //  habia cometido el erroe de indicar imprimir un entero en la cadena
     }
 }
 
 void mostrarMasVieja(Compu pcs[], int cantidad) {
     int masVieja = 0; // auxiliar para guardar la pc mas vieja
-    int anioref = 10; // año de referencia para comparar
+    int anioref = 10000; // año de referencia para comparar
     for (int i=0; i<cantidad; i++) {
-        if (pcs[i].anio > anioref) {
+        if (pcs[i].anio < anioref) {
             masVieja = i;
             anioref = pcs[i].anio; // actualizo el año de referencia
         }
@@ -69,7 +69,7 @@ void mostrarMasVieja(Compu pcs[], int cantidad) {
     printf("Velocidad: %d\n", pcs[masVieja].velocidad);
     printf("Anio: %d\n", pcs[masVieja].anio);
     printf("Cantidad de nucleos: %d\n", pcs[masVieja].cantidad_nucleos);
-    printf("Tipo de CPU: %d\n", pcs[masVieja].tipo_cpu);
+    printf("Tipo de CPU: %s\n", pcs[masVieja].tipo_cpu); //  habia cometido el erroe de indicar imprimir un entero en la cadena
 }
 
 void mostrarMasVeloz(Compu pcs[], int cantidad) {
@@ -85,6 +85,5 @@ void mostrarMasVeloz(Compu pcs[], int cantidad) {
     printf("Velocidad: %d\n", pcs[masVeloz].velocidad);
     printf("Anio: %d\n", pcs[masVeloz].anio);
     printf("Cantidad de nucleos: %d\n", pcs[masVeloz].cantidad_nucleos);
-    printf("Tipo de CPU: %d\n", pcs[masVeloz].tipo_cpu);
+    printf("Tipo de CPU: %s\n", pcs[masVeloz].tipo_cpu); //  habia cometido el erroe de indicar imprimir un entero en la cadena
 }
-
